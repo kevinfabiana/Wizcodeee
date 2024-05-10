@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background-color: #797979;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0.5em 0;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #8d8989;
+        }
+
+        main {
+            margin-left: 250px;
+            flex: 1;
+            padding: 20px;
+        }
+
+        section {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #7a7878;
+            border-radius: 5px;
+            background-color: #1e1e1e;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            color: #9a9393;
+        }
+
+        pre {
+            background-color: #2d2d2d;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        code {
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            width: 100%;
+            margin-top: auto;
+        }
+    </style>
+    <title>Pengajaran Python Dasar</title>
+</head>
+
+<body>
+    <header>
+        <h1>Pengajaran Python Dasar</h1>
+    </header>
+
+    <nav>
+        <a href="#introduction">Pengenalan</a>
+        <a href="#basic-syntax">Sintaks Dasar</a>
+        <a href="#variables">Variabel dan Tipe Data</a>
+        <a href="#control-flow">Kontrol Alur</a>
+        <a href="#functions">Fungsi</a>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Pengenalan Python</h2>
+            <p>Python adalah bahasa pemrograman tingkat tinggi yang populer...</p>
+            <p>Dengan sintaksis yang mudah dipahami, Python menjadi pilihan utama...</p>
+            <p>Python digunakan dalam berbagai bidang, termasuk pengembangan web,...</p>
+        
+            <h3>Fitur Utama Python</h3>
+            <ul>
+                <li><strong>Ekosistem Luas:</strong> Python memiliki berbagai pustaka dan framework yang mendukung pengembangan di berbagai bidang seperti ilmu data, kecerdasan buatan, dan lainnya.</li>
+                <li><strong>Sintaksis yang Elegan:</strong> Python didesain dengan sintaksis yang bersih dan mudah dibaca, membuatnya cocok untuk pemula dan pengembang berpengalaman.</li>
+                <li><strong>Interpretasi dan Kompilasi:</strong> Python dapat dijalankan dalam mode interpretasi atau dikompilasi, memberikan fleksibilitas dalam pengembangan dan eksekusi program.</li>
+            </ul>
+        
+            <h3>Penggunaan Python dalam Pengembangan Web</h3>
+            <p>Python sangat populer dalam pengembangan web dan memiliki framework yang kuat seperti Django dan Flask.</p>
+            <p>Contoh penggunaan Flask untuk membuat aplikasi web sederhana:</p>
+            <pre><code>
+        from flask import Flask
+        app = Flask(__name__)
+        
+        @app.route('/')
+        def beranda():
+            return 'Selamat datang di aplikasi web Python!'
+            </code></pre>
+        
+            <h3>Ilmu Data dan Kecerdasan Buatan</h3>
+            <p>Python digunakan secara luas dalam ilmu data dan kecerdasan buatan dengan pustaka seperti NumPy, Pandas, dan TensorFlow.</p>
+            <p>Contoh penggunaan NumPy untuk operasi matriks:</p>
+            <pre><code>
+        import numpy as np
+        matriks = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+        print(matriks)
+            </code></pre>
+        
+            <h3>Masih Banyak Lagi!</h3>
+            <p>Ini hanya sebagian kecil dari apa yang bisa Anda lakukan dengan Python. Dari pengembangan permainan hingga pemrograman mikrokontroler, Python dapat digunakan untuk berbagai tujuan.</p>
+        </section>
+        
+    
+        <section id="basic-syntax">
+            <h2>Sintaks Dasar Python</h2>
+            <p>Sintaks dasar Python sangat bersahabat dan mudah dipahami oleh...</p>
+            <p>Perhatikan contoh penggunaan indentasi untuk menandai blok kode...</p>
+            <pre><code>
+        if kondisi:
+            print("Ini adalah blok kode yang terkait dengan kondisi")
+            </code></pre>
+            <p>Indentasi adalah bagian integral dari Python dan digunakan untuk...</p>
+        
+            <p>Python juga menggunakan operator standar seperti +, -, *, /...</p>
+            <p>Contoh penggunaan operator aritmatika:</p>
+            <pre><code>
+        angka1 = 10
+        angka2 = 5
+        
+        penjumlahan = angka1 + angka2
+        pengurangan = angka1 - angka2
+        perkalian = angka1 * angka2
+        pembagian = angka1 / angka2
+        
+        print("Penjumlahan:", penjumlahan)
+        print("Pengurangan:", pengurangan)
+        print("Perkalian:", perkalian)
+        print("Pembagian:", pembagian)
+            </code></pre>
+        
+            <p>Python mendukung operasi pada berbagai tipe data, termasuk...</p>
+            <p>Contoh penggunaan operator pada string:</p>
+            <pre><code>
+        teks1 = "Hello"
+        teks2 = "World"
+        
+        gabung = teks1 + " " + teks2
+        ulang = teks1 * 3
+        
+        print("Gabungan:", gabung)
+        print("Pengulangan:", ulang)
+            </code></pre>
+        
+            <p>Ini hanya sebagian kecil dari apa yang dapat Anda lakukan dengan...</p>
+        </section>
+        
+    
+        <section id="variables">
+            <h2>Variabel dan Tipe Data</h2>
+            <p>Variabel adalah wadah untuk menyimpan data dalam Python...</p>
+            <p>Python memiliki beberapa tipe data dasar yang digunakan untuk...</p>
+        
+            <p><strong>Tipe Data Integer:</strong></p>
+            <p>Tipe data integer (int) digunakan untuk menyimpan bilangan bulat...</p>
+            <pre><code>
+        umur = 25
+        jumlah_anak = 2
+            </code></pre>
+        
+            <p><strong>Tipe Data Float:</strong></p>
+            <p>Tipe data float digunakan untuk menyimpan bilangan desimal...</p>
+            <pre><code>
+        tinggi = 175.5
+        berat_badan = 68.3
+            </code></pre>
+        
+            <p><strong>Tipe Data String:</strong></p>
+            <p>Tipe data string (str) digunakan untuk menyimpan teks...</p>
+            <pre><code>
+        nama = "John Doe"
+        jenis_kelamin = 'Laki-laki'
+            </code></pre>
+        
+            <p><strong>Operasi Matematika pada Variabel:</strong></p>
+            <p>Anda dapat melakukan berbagai operasi matematika pada variabel-variabel...</p>
+            <pre><code>
+        angka1 = 10
+        angka2 = 5
+        
+        penjumlahan = angka1 + angka2
+        pengurangan = angka1 - angka2
+        perkalian = angka1 * angka2
+        pembagian = angka1 / angka2
+        
+        print("Penjumlahan:", penjumlahan)
+        print("Pengurangan:", pengurangan)
+        print("Perkalian:", perkalian)
+        print("Pembagian:", pembagian)
+            </code></pre>
+        
+            <p><strong>Manipulasi String:</strong></p>
+            <p>Anda dapat melakukan berbagai manipulasi string seperti penggabungan...</p>
+            <pre><code>
+        sapaan = "Halo, "
+        nama = "John"
+        
+        sapaan_lengkap = sapaan + nama + "!"
+        print(sapaan_lengkap)
+            </code></pre>
+        
+            <p>Ini adalah beberapa dasar penggunaan variabel dan tipe data dalam Python...</p>
+        </section>
+        
+    
+        <section id="control-flow">
+            <h2>Kontrol Alur</h2>
+            <p>Kontrol alur sangat penting dalam mengatur eksekusi program...</p>
+        
+            <p><strong>Pernyataan If, Elif, dan Else:</strong></p>
+            <p>Dengan menggunakan pernyataan if, elif, dan else, Anda dapat membuat keputusan dalam...</p>
+            <pre><code>
+        nilai = 75
+        
+        if nilai >= 80:
+            print("Nilai A")
+        elif nilai >= 70:
+            print("Nilai B")
+        elif nilai >= 60:
+            print("Nilai C")
+        else:
+            print("Anda tidak lulus")
+            </code></pre>
+            <p>Pada contoh di atas, program akan menentukan kategori nilai berdasarkan kondisi yang...</p>
+        
+            <p><strong>Pernyataan Pengulangan:</strong></p>
+            <p>Anda dapat menggunakan pernyataan pengulangan seperti for dan while untuk...</p>
+            <pre><code>
+        # Contoh penggunaan pernyataan pengulangan for
+        for i in range(5):
+            print("Iterasi ke-", i+1)
+        
+        # Contoh penggunaan pernyataan pengulangan while
+        angka = 1
+        while angka <= 5:
+            print("Angka:", angka)
+            angka += 1
+            </code></pre>
+            <p>Pada contoh di atas, program akan melakukan iterasi sebanyak 5 kali dengan...</p>
+        
+            <p>Kontrol alur memberikan kemampuan untuk membuat keputusan dan mengulang...</p>
+        </section>
+        
+    
+        <section id="functions">
+            <h2>Fungsi dalam Python</h2>
+            <p>Fungsi adalah blok kode yang dapat dipanggil untuk melakukan tugas tertentu...</p>
+        
+            <p><strong>Pengenalan Fungsi:</strong></p>
+            <p>Fungsi dalam Python didefinisikan menggunakan kata kunci <code>def</code>. Berikut adalah contoh...</p>
+            <pre><code>
+        # Contoh fungsi sederhana
+        def sapa(nama):
+            print("Halo, " + nama + "!")
+            
+        # Panggil fungsi
+        sapa("John")
+            </code></pre>
+            <p>Pada contoh di atas, fungsi <code>sapa</code> digunakan untuk menyapa seseorang dengan...</p>
+        
+            <p><strong>Fungsi dengan Nilai Kembalian:</strong></p>
+            <p>Fungsi dapat mengembalikan nilai menggunakan pernyataan <code>return</code>. Berikut adalah...</p>
+            <pre><code>
+        # Contoh fungsi dengan nilai kembalian
+        def tambah(a, b):
+            hasil = a + b
+            return hasil
+            
+        # Panggil fungsi dan simpan hasilnya
+        total = tambah(5, 3)
+        print("Hasil penjumlahan:", total)
+            </code></pre>
+            <p>Pada contoh di atas, fungsi <code>tambah</code> mengembalikan hasil penjumlahan dari...</p>
+        
+            <p><strong>Parameter dan Argumen:</strong></p>
+            <p>Fungsi dapat memiliki parameter, yaitu variabel yang digunakan untuk menerima nilai...</p>
+            <pre><code>
+        # Contoh fungsi dengan parameter
+        def luas_persegi(sisi):
+            luas = sisi ** 2
+            return luas
+            
+        # Panggil fungsi dengan memberikan argumen
+        sisi_persegi = 4
+        hasil_luas = luas_persegi(sisi_persegi)
+        print("Luas persegi dengan sisi", sisi_persegi, "adalah", hasil_luas)
+            </code></pre>
+            <p>Pada contoh di atas, fungsi <code>luas_persegi</code> memiliki parameter <code>sisi</code>...</p>
+        
+            <p>Fungsi adalah konsep yang kuat dalam pemrograman Python, memungkinkan...</p>
+        </section>
+        
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Whizcode</p>
+    </footer>
+</body>
+
+</html>
